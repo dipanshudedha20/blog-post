@@ -1,0 +1,81 @@
+/* styles.css */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #eaecee;
+    color: #333;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+header {
+    background-color: #8b0000;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    transition: background-color 0.5s ease;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #8b0000;
+    background-color: white;
+    border-radius: 3px;
+}
+
+main {
+    padding: 20px;
+    transition: padding 0.3s ease;
+}
+
+section {
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+section:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    background-color: #fdfdfd;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #8b0000;
+    color: white;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+img {
+    border: 2px solid #8b0000;
+    border-radius: 5px;
+    margin: 10px;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.1);
+    border-color: #333;
+}

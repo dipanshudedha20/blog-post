@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Red Fort</title>
+    <link rel="stylesheet" href="university.css">
+    <script>
+        function postComment(event) {
+            event.preventDefault(); // Prevent form redirection
+            
+            var name = document.getElementById("name").value;
+            var comment = document.getElementById("comment").value;
+            
+            if(name.trim() === "" || comment.trim() === "") {
+                alert("Please fill out both fields before submitting.");
+                return;
+            }
+
+            var commentSection = document.getElementById("comment-list");
+            var newComment = document.createElement("div");
+            newComment.classList.add("comment-box");
+            newComment.innerHTML = `<strong>${name}</strong><p>${comment}</p>`;
+            
+            commentSection.appendChild(newComment);
+
+            document.getElementById("comment-form").reset(); // Reset form
+        }
+    </script>
+    <style>
+        .comment-box {
+            background: #f9f9f9;
+            border-left: 4px solid #ff5733;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+        .comment-box strong {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to the Red Fort</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#history">History</a></li>
+                <li><a href="#architecture">Architecture</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#comments">Comments</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about">
+            <h2>About the Red Fort</h2>
+            <p>The Red Fort, also known as Lal Qila, is one of India's most iconic monuments. It is located in Old Delhi and served as the main residence of Mughal emperors for nearly 200 years, from 1648 until the British took control in 1857. The fort is a UNESCO World Heritage Site and is renowned for its grand architecture, intricate decorations, and historical significance.</p>
+        </section>
+
+        <section id="history">
+            <h2>History</h2>
+            <p> Mughal Era (Construction and Early Use)
+                Commissioned by Mughal Emperor Shah Jahan in 1638, the Red Fort was built as the new capital, shifting from Agra to Delhi.
+                
+                Construction took 10 years (1638–1648) and was supervised by the architect Ustad Ahmad Lahori, the same architect who designed the Taj Mahal.
+                
+                The fort was originally known as Qila-e-Mubarak (Blessed Fort).
+                
+                It served as the political and cultural center of the Mughal Empire.
+                
+                2. Decline of Mughal Power
+                The Mughal Empire weakened after Aurangzeb's reign (1658–1707).
+                
+                In 1739, Persian ruler Nadir Shah invaded Delhi and looted the fort, including the famous Peacock Throne.
+                
+                The fort was further attacked by the Marathas in the late 18th century and later came under British control after the Second Anglo-Maratha War (1803).
+                
+                3. British Rule and 1857 Revolt
+                The Red Fort was a major site during the Indian Rebellion of 1857 (First War of Independence).
+                
+                After suppressing the revolt, the British exiled the last Mughal Emperor, Bahadur Shah II, and destroyed parts of the fort, including gardens and some palaces.
+                
+                It was used as a military camp by the British.
+                
+                4. Post-Independence and Modern Era
+                After India gained independence in 1947, the first Prime Minister of India, Jawaharlal Nehru, raised the national flag at the Red Fort.
+                
+                Since then, it has been a symbol of India's independence, and every year on August 15, the Prime Minister hoists the national flag and delivers a speech.
+                
+                In 2007, UNESCO designated the Red Fort as a World Heritage Site.</p>
+        </section>
+
+        <section id="architecture">
+            <h2>Architecture</h2>
+            <p>Layout and Design
+                The fort is octagonal in shape and covers 254 acres.
+                
+                It has 2 main gates: Lahori Gate (main entrance) and Delhi Gate.
+                
+                The walls are 2.5 km long and vary in height from 18 meters (river-facing side) to 33 meters (city-facing side).
+                
+                The fort complex includes palaces, halls, mosques, gardens, and markets.
+                
+                2. Important Structures Inside the Red Fort
+                a) Lahori Gate
+                The main entrance of the fort, facing Lahore (now in Pakistan).
+                
+                Every year on Independence Day (August 15), the Prime Minister hoists the Indian flag here.
+                
+                b) Delhi Gate
+                The southern gate, similar in design to the Lahori Gate.
+                
+                c) Diwan-i-Aam (Hall of Public Audience)
+                A large hall where the emperor addressed the public and heard their grievances.
+                
+                The throne area was decorated with marble and semi-precious stones.
+                
+                d) Diwan-i-Khas (Hall of Private Audience)
+                A smaller, more luxurious hall where the emperor met with important dignitaries.
+                
+                The famous Peacock Throne was once placed here.
+                
+                Inscription: "If there is a paradise on Earth, it is this, it is this, it is this."
+                
+                e) Rang Mahal (Palace of Colors)
+                The residential palace for the emperor’s wives and mistresses.
+                
+                Decorated with colored stones, mirrors, and a central water fountain.
+                
+                f) Mumtaz Mahal and Khas Mahal
+                Mumtaz Mahal was used for royal ladies.
+                
+                Khas Mahal was the emperor’s personal residence.
+                
+                g) Moti Masjid (Pearl Mosque)
+                A small, white marble mosque built by Aurangzeb for his personal prayers.
+                
+                h) Hayat Bakhsh Bagh (Life-Giving Garden)
+                A beautiful garden with fountains, water channels, and pavilions.</p>
+        </section>
+
+        <section id="gallery">
+            <h2>Gallery</h2>
+            <p>Explore the stunning visuals of the Red Fort:</p>
+            <img src="red1.jpg" alt="Red Fort Image 1" width="300" height="200">
+            <img src="red2.jpg" alt="Red Fort Image 2" width="300" height="200">
+            <img src="red3.jpg" alt="Red Fort Image 3" width="300" height="200">
+        </section>
+
+        <section id="comments">
+            <h2>Comments</h2>
+            <p>We would love to hear your thoughts about the Red Fort. Please leave your comments below:</p>
+            <form id="comment-form" onsubmit="postComment(event)">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <br><br>
+                <label for="comment">Comment:</label>
+                <textarea id="comment" name="comment" rows="5" cols="30" required></textarea>
+                <br><br>
+                <button type="submit">Submit</button>
+            </form>
+            <div id="comment-list"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Red Fort Web Page. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
